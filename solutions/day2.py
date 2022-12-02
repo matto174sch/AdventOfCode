@@ -1,5 +1,5 @@
 def solution_day2():
-    data = open("solutions/resources/day2/day2.txt", "r")
+    data = open("solutions/resources/day2.txt", "r")
 
     data.close()
     return 123

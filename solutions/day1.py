@@ -1,5 +1,5 @@
 def solution_day1():
-    data = open("solutions/resources/day1/day1.txt", "r")
+    data = open("solutions/resources/day1.txt", "r")
 
     top_cals = 0
     curr_cals = 0
