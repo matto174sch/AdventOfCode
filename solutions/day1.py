@@ -15,7 +15,7 @@ def task1(data):
 
     return [top_cals, elves]
 
-def task2(data):
+def task2():
     top_cals = 0
     elves = task1(DATA)[1]
 
@@ -32,7 +32,7 @@ def task2(data):
 
 def main():
     print(task1(DATA))
-    print(task2(DATA))
+    print(task2())
     DATA.close()
 
 if __name__ == "__main__":
