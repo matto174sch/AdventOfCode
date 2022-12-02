@@ -8,9 +8,12 @@ def main():
     data.close()
 
     data = open("solutions/resources/day2.txt", "r")
+    data2 = open("solutions/resources/day2.txt", "r")
     print("Day 2:")
-    print(f"> Solution Day 2: {day2.task1(data)}")
+    print(f"> Solution Task 1: {day2.task1(data)}")
+    print(f"> Solution Task 2: {day2.task2(data2)}")
     data.close()
+    data2.close()
 
     return None
 

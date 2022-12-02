@@ -4,7 +4,7 @@ DATA = open("solutions/resources/day2.txt", "r")
 # X = ROCK, Y = PAPER, Z = SCISSORS
 # IF A: X => DRAW, Y => WIN, Z => LOSS
 # IF B: X => LOSS, Y => DRAW, Z => WIN
-# IF C: X => WIN, Y => LOSS, Z => WIN
+# IF C: X => WIN, Y => LOSS, Z => DRAW
 
 def calc_round_outcome(line):
     # line = [opponent, you]
@@ -65,8 +65,69 @@ def task1(data):
 
     return total_score
 
+def cal_outcome_task2(line):
+    opp = line[0]
+    you = line[1]
+
+    # IF YOU = X: LOSE!
+    # IF YOU = Y: DRAW!
+    # IF YOU = Z: WIN!
+
+    if you == "X":
+        if opp == "A":
+            return [0, "Z"]
+
+        if opp == "B":
+            return [0, "X"]
+
+        if opp == "C":
+            return [0, "Y"]
+
+    if you == "Y":
+        if opp == "A":
+            return [3, "X"]
+
+        if opp == "B":
+            return [3, "Y"]
+
+        if opp == "C":
+            return [3, "Z"]
+    
+    if you == "Z":
+        if opp == "A":
+            return [6, "Y"]
+
+        if opp == "B":
+            return [6, "Z"]
+
+        if opp == "C":
+            return [6, "X"]
+    
+    return "error"
+
+def calc_round_score_task2(token):
+    if token == "X":
+        return 1
+    
+    if token == "Y":
+        return 2
+
+    if token == "Z":
+        return 3
+
+    return "error" 
+
+def task2(data):
+    total_score = 0
+    for line in data:
+        res = cal_outcome_task2(line.rstrip().split(" "))
+        total_score += res[0] + calc_round_score_task2(res[1])
+
+    return total_score
+
 def main():
     print(task1(DATA))
+    print(task2(DATA))
     DATA.close()
 
 if __name__ == "__main__":
