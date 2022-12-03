@@ -15,6 +15,13 @@ def main():
     data.close()
     data2.close()
 
+    task1_3 = open("solutions/resources/day3.txt", "r")
+    print("Day 3:")
+    print(f"> Solution Task 1: {day3.task1(task1_3)}")
+    #print(f"> Solution Task 2: {day2.task2(data2)}")
+    task1_3.close()
+
+
     return None
 
 if __name__ == "__main__":
