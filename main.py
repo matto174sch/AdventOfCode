@@ -23,6 +23,13 @@ def main():
     print(f"> Solution Task 2: {day3.task2(task23)}")
     task23.close()
 
+    task14 = open("solutions/resources/day4.txt", "r")
+    print("\nDay 4:")
+    print(f"> Solution Task 1: {day4.task1(task14)}")
+    task14.close()
+    task24 = open("solutions/resources/day4.txt", "r")
+    print(f"> Solution Task 2: {day4.task2(task24)}")
+    task24.close()
 
     return None
 
