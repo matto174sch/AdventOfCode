@@ -36,7 +36,7 @@ def task2(data):
         first_range = range(int(frange1), int(frange2) + 1)
         second_range = range(int(srange1), int(srange2) + 1)
         
-        if list(set(first_range) & set(second_range)):
+        if set(first_range) & set(second_range):
             output += 1
 
     return output
