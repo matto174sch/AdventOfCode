@@ -31,6 +31,13 @@ def main():
     print(f"> Solution Task 2: {day4.task2(task24)}")
     task24.close()
 
+    task15 = open("solutions/resources/day5.txt", "r")
+    print("\nDay 5:")
+    print(f"> Solution Task 1: {day5.task1(task15)}")
+    task15.close()
+    task25 = open("solutions/resources/day5.txt", "r")
+    print(f"> Solution Task 2: {day5.task2(task25)}")
+    task25.close()
     return None
 
 if __name__ == "__main__":
